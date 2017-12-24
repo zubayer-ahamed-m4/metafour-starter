@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.fasterxml.jackson.annotation.JsonCreator.Mode;
 import com.metafour.starter.exception.MetafourStarterException;
 import com.metafour.starter.model.Person;
 import com.metafour.starter.service.DestinationService;
@@ -51,6 +52,7 @@ public class PersonController {
 
 	@RequestMapping
 	public String newScreen(final ModelMap model) throws MetafourStarterException {
+		//model.addAttribute("person", new Person());
 		return updateScreen(null, model);
 	}
 
